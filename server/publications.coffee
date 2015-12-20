@@ -1,3 +1,3 @@
 Meteor.publish('theSubs', ->
-   Subs.find()
+   Subs.findOne({user: this.userId})
 )
