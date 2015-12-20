@@ -1,0 +1,27 @@
+body
+  +theHeader
+  +theInput
+
+
+template(name="theInput")
+  .container.col-lg-2
+  .container.col-lg-8
+      textarea#theInput.form-control.inputWithMargin(rows="8", name='theCode', type='textarea', placeholder='Input')
+      textarea#theOutput.form-control.outputWithMargin(rows="8", name='theCode', type='textarea', placeholder='Output')
+      +theReplacer
+
+template(name="theReplacer")
+    .row
+     .col-lg-5
+        input#theShorthand.form-control(type="text",placeholder="Shorthand")
+     .col-lg-5
+        input#theReplacement.form-control(type="text",placeholder="Replacement")
+     .btn.btn-sm.btn-success#replacementAdd
+      span.glyphicon.glyphicon-plus
+     
+
+template(name="theHeader")
+  nav.navbar.navbar-default.navbar-static-top
+    span.appTitle Shorthand
+    span.navbar-middle
+      +loginButtons

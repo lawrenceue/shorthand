@@ -1,0 +1,16 @@
+"Shorthand" is a single-page app designed to store and perform simple text replacement shortcuts for a user.
+
+The app is organized loosely along Meteor standards. The file structure is as follows:
+
+Folders:
+
+Client
+  app.jade: the main template consisting of three templates
+      --
+      --
+      --
+
+Server
+  app.coffee
+
+`
