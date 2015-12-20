@@ -1,11 +1,9 @@
 Template.theInput.events
   'change #theInput': (event, template) -> 
    x = template.find('#theInput').value
-   console.log(x)
-   y = x.split(' ').map (x) ->
-       replacer(x, obj1)
-   console.log(y.join(' '))
-   template.find("#theOutput").value = "ABC"
+   y = x.split(/(\s|\n)/g).map (x) ->
+       replacer(x, Subs.findOne({user: Meteor.userId()}))
+   template.find("#theOutput").value = y.join('')
    return
   'click #replacementAdd': (event, template) ->
    shorthand = template.find('#theShorthand').value
