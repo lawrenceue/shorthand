@@ -5,7 +5,8 @@ Meteor.methods
        x[a]=c
        Subs.update({user: b}, x)
      else
-       x = {user: b}
+       x = {}
+       x["user"] = b
        x[a] = c
        Subs.insert(x)
      return

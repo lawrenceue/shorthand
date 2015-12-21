@@ -1,5 +1,5 @@
 Meteor.publish('theSubs', ->
-  x = @userId.toString()
+  x = @userId
   Subs.find({user: x})
 )
 
