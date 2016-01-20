@@ -16,7 +16,7 @@ Template.theInput.events
 
 replacer = (str, obj, arr) ->
   newStr = str
-  newStr = obj[newStr] if newStr in Object.keys(obj)
+  newStr = obj[newStr] if newStr.toLowerCase() in Object.keys(obj)
   newStr
 
 Meteor.subscribe('theSubs')
